@@ -1,0 +1,44 @@
+body {
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5rem;
+  max-width: 1500px;
+  margin: auto;
+
+  & #editor-container {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+
+    & h1 {
+      text-align: center;
+      font-family: "Arial", sans-serif;
+    }
+
+    & textarea {
+      width: 100%;
+      height: 30rem;
+      padding: 10px;
+      border: 8px solid #040946;
+      background-color: #9fbcca;
+      overflow-y: hidden;
+    }
+  }
+  & #preview {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 3rem;
+    min-height: 200px;
+  }
+  #preview img {
+    max-width: 6rem;
+    height: auto;
+  }
+}
